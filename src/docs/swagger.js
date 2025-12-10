@@ -10,8 +10,8 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000",
-        description: "Servidor local"
+        url: "https://glistening-motivation-production-ef86.up.railway.app/",
+        description: "Servidor Produccion"
       }
     ],
     components: {
