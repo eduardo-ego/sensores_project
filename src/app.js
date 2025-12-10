@@ -1,8 +1,8 @@
 import express from "express";
 import cors from "cors";
 import swaggerUi from "swagger-ui-express";
-import { swaggerSpec } from "./src/docs/swagger.js";
-import sensoresRoutes from "./routes/sensor.routes.js";
+import { swaggerSpec } from "./docs/swagger.js";
+import sensoresRoutes from "../routes/sensor.routes.js";
 
 const app = express();
 
