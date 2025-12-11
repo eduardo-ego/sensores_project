@@ -1,0 +1,1 @@
+export const config = "https://glistening-motivation-production-ef86.up.railway.app/sensores"
