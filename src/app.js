@@ -8,6 +8,7 @@ import sensoresRoutes from "../routes/sensor.routes.js";
 
 const app = express();
 
+console.log("Iniciando servidor...");
 // Obtener __dirname en ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
