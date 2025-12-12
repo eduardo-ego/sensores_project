@@ -1,113 +1,153 @@
-/* ===== Reset básico ===== */
+/* RESET */
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
 body {
   margin: 0;
-  padding: 0;
-  font-family: "Inter", Arial, sans-serif;
-  background: #f5f7fa;
-  color: #333;
+  background: #f4f6f8;
+  color: #1f2933;
 }
 
-/* ===== Layout principal ===== */
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
+/* LAYOUT */
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  height: 100vh;
 }
 
-/* ===== Título ===== */
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-  color: #222;
-}
-
-/* ===== Tarjetas ===== */
-.card {
-  background: white;
-  padding: 20px;
-  margin-bottom: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-}
-
-/* ===== Formulario ===== */
-.form-group {
+/* SIDEBAR */
+.sidebar {
+  background: #0f172a;
+  color: #fff;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
 }
 
-.form-group label {
-  font-weight: 600;
-  margin-bottom: 6px;
+.sidebar h1 {
+  margin-bottom: 32px;
+  font-size: 20px;
 }
 
-.form-group input {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #d0d7de;
-  font-size: 1rem;
-  transition: border 0.2s;
+/* 👇 AQUÍ ESTÁ LA CLAVE */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.form-group input:focus {
-  border-color: #0070f3;
-  outline: none;
-  box-shadow: 0 0 4px rgba(0,120,255,0.3);
-}
-
-/* ===== Botones ===== */
-button {
-  padding: 10px 16px;
+.sidebar nav button {
+  width: 100%;
+  background: transparent;
   border: none;
-  border-radius: 8px;
+  color: #cbd5e1;
+  padding: 10px 12px;
+  text-align: left;
+  border-radius: 4px;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.25s ease;
+  font-size: 14px;
 }
 
-button.primary {
-  background: #0070f3;
-  color: white;
+/* Estado activo / hover */
+.sidebar nav button.active,
+.sidebar nav button:hover {
+  background: #1e293b;
+  color: #ffffff;
 }
 
-button.primary:hover {
-  background: #0059c8;
+.sidebar footer {
+  margin-top: auto;
+  font-size: 12px;
+  opacity: 0.7;
 }
-
-button.danger {
-  background: #e63946;
-  color: white;
-}
-
-button.danger:hover {
-  background: #b92d38;
-}
-
-/* ===== Lista de sensores ===== */
-.sensor-list {
+/* MAIN */
+.main {
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
-.sensor-card {
-  padding: 15px;
-  border: 1px solid #d0d7de;
+/* HEADER */
+.header {
   background: #fff;
-  border-radius: 10px;
+  padding: 20px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.sensor-info {
-  line-height: 1.45;
+.header input {
+  padding: 8px 12px;
+  width: 240px;
 }
 
-/* ===== Botones dentro de la tarjeta ===== */
-.sensor-actions button {
-  margin-left: 10px;
+/* CONTENT */
+.content {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* FORM */
+.form-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* BUTTONS */
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+
+button.danger {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+}
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table th {
+  text-align: left;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.alert {
+  color: #dc2626;
+  font-weight: 600;
 }
